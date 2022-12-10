@@ -1,32 +1,36 @@
-#include <string.h>
-
+#include <string>
+using namespace std;
 
 class Employee {
     private: // all information should be private
         int income;
-        int sinNumber; //one time setting
-        char role[50];
-        char title[50];
-        char department [50];
-        char firstName [50];
-        char lastName [50];
+        int sinNumber;
+        string role;
+        string title;
+        string department;
+        string firstName;
+        string lastName;
     public:
-        Employee(int income, int sinNumber, char* role, char* title, char* department, char* firstName, char* lastName);
+        
+        Employee();
         int employeeNumber; 
         int readIncome(); // figure out which params to read with 
-        bool setIncome(int newIncome);
+        void setIncome(int newIncome);
 
-        char* readRole();
-        bool setRole(char* newRole);
+        void setSinNumber(int newSinNumber);
 
-        char* readTitle();
-        bool setTitle(char* newTitle);
 
-        char* readDepartment();
-        bool setDepartment(char* newDepartment);
+        string readRole();
+        void setRole(char* newRole);
 
-        char* readName();
-        bool setName(char* newFirstName, char* newLastName);
+        string readTitle();
+        void setTitle(char* newTitle);
+
+        string readDepartment();
+        void setDepartment(char* newDepartment);
+
+        string readName();
+        void setName(char* newFirstName, char* newLastName);
     
 };
 
